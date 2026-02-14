@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>BumTum — Beautiful Landing</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<meta name="description" content="A clean, responsive landing page template." />
+	<style>
+		:root{
+			--bg: linear-gradient(180deg,#0f172a 0%,#071029 100%);
+			--card:#0b1220;
+			--muted:#9aa7bf;
+			--accent:#7c5cff;
+			--glass: rgba(255,255,255,0.04);
+			--radius:14px;
+			--max-width:1100px;
+			color-scheme: dark;
+		}
+		*{box-sizing:border-box}
+		html,body{height:100%}
+		body{
+			margin:0;
+			font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+			background:var(--bg);
+			color:#e6eef8;
+			-webkit-font-smoothing:antialiased;
+			-moz-osx-font-smoothing:grayscale;
+			line-height:1.5;
+			padding:32px 20px;
+		}
+		.wrap{max-width:var(--max-width);margin:0 auto}
+
+		header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+		.brand{display:flex;align-items:center;gap:12px}
+		.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#00d4ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#071029}
+		nav{display:flex;gap:18px;align-items:center}
+		nav a{color:var(--muted);text-decoration:none;font-weight:600}
+		.cta{background:linear-gradient(90deg,var(--accent),#00d4ff);padding:10px 16px;border-radius:10px;color:#061229;font-weight:700;border:none;cursor:pointer}
+
+		main{margin-top:36px;display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:start}
+		@media (max-width:900px){main{grid-template-columns:1fr}header{flex-direction:column;align-items:flex-start}nav{display:none}}
+
+		.hero{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:var(--radius);backdrop-filter:blur(6px)}
+		.eyebrow{display:inline-block;padding:6px 10px;background:var(--glass);border-radius:999px;color:var(--muted);font-size:13px;margin-bottom:12px}
+		h1{margin:6px 0 12px;font-size:clamp(28px,4vw,40px);line-height:1.02}
+		p.lead{color:var(--muted);margin:0 0 18px}
+
+		.actions{display:flex;gap:12px;flex-wrap:wrap}
+		.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--muted)}
+
+		/* right column */
+		.panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+		.stat{display:flex;align-items:center;gap:12px}
+		.stat .num{font-weight:700;font-size:20px}
+		.features{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+
+		/* cards */
+		.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+		.card h3{margin:0 0 6px;font-size:15px}
+		.card p{margin:0;color:var(--muted);font-size:13px}
+
+		/* showcase */
+		.showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+		.showcase .tile{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px;text-align:center}
+
+		footer{margin-top:36px;color:var(--muted);font-size:13px;text-align:center}
+
+		/* subtle animation */
+		.logo, .card, .panel{transition:transform .28s ease,box-shadow .28s ease}
+		.card:hover, .panel:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(3,6,23,0.6)}
+		.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--muted)}
+
+		/* small utilities */
+		.muted{color:var(--muted)}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div class="brand">
+				<div class="logo">BT</div>
+				<div>
+					<div style="font-weight:700">BumTum</div>
+					<div style="font-size:12px;color:var(--muted);margin-top:2px">Handcrafted UI template</div>
+				</div>
+			</div>
+			<nav aria-label="Main Navigation">
+				<a href="#">Products</a>
+				<a href="#">Pricing</a>
+				<a href="#">Docs</a>
+				<button class="cta">Get Started</button>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<span class="eyebrow">New · 2026</span>
+				<h1>Beautiful, fast landing pages for your projects</h1>
+				<p class="lead">Ship a clean, modern landing page in minutes — responsive, accessible and performance-minded.</p>
+
+				<div class="actions">
+					<button class="cta">Try Live Demo</button>
+					<button class="secondary">View Templates</button>
+				</div>
+
+				<div class="showcase">
+					<div class="tile card">
+						<strong>Easy</strong>
+						<div class="muted">Minimal setup, maximum polish</div>
+					</div>
+					<div class="tile card">
+						<strong>Responsive</strong>
+						<div class="muted">Looks great on any device</div>
+					</div>
+					<div class="tile card">
+						<strong>Performance</strong>
+						<div class="muted">Tiny, semantic markup</div>
+					</div>
+				</div>
+			</section>
+
+			<aside>
+				<div class="panel">
+					<div class="stat">
+						<div>
+							<div class="num">98%</div>
+							<div class="muted">Satisfaction</div>
+						</div>
+					</div>
+
+					<div class="features">
+						<div class="card">
+							<h3>Components</h3>
+							<p>Modular pieces you can reuse.</p>
+						</div>
+						<div class="card">
+							<h3>Docs</h3>
+							<p>Clear examples and usage guidelines.</p>
+						</div>
+						<div class="card">
+							<h3>Support</h3>
+							<p>Community-driven and friendly.</p>
+						</div>
+						<div class="card">
+							<h3>Updates</h3>
+							<p>Regular improvements and fixes.</p>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</main>
+
+		<footer>
+			<div class="wrap muted">© 2026 BumTum — Built with care. Template preview only.</div>
+		</footer>
+	</div>
+
+	<script>
+		// Small enhancement: keyboard focus visible for buttons
+		(function(){
+			const body = document.body;
+			function handleFirstTab(e){
+				if(e.key === 'Tab'){
+					body.classList.add('user-is-tabbing');
+					window.removeEventListener('keydown', handleFirstTab);
+				}
+			}
+			window.addEventListener('keydown', handleFirstTab);
+		})();
+	</script>
+</body>
+</html>
